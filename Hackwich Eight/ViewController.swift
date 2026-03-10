@@ -9,11 +9,11 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
 {
-    
-    @IBOutlet weak var friendTable: UITableView!
+ 
     
     
     var friends: [String] = ["Diego", "Royce", "Brandon"]
+    var friendsHomes: [String] = ["Honolulu", "Honolulu", "Honolulu"]
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
@@ -24,6 +24,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     {
         let cell: UITableViewCell = UITableViewCell(style: .default, reuseIdentifier: "cell")
         cell.textLabel?.text = friends[indexPath.row]
+            cell.detailTextLabel?.text = friendsHomes[indexPath.row]
         return cell
     }
     

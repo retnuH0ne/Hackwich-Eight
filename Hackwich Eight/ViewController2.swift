@@ -11,10 +11,10 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
 {
     
     
-    @IBOutlet weak var travelTable: UITableView!
     
     
-    var places: [String] = ["Korea", "Japan", "Disneyland"]
+    var places: [String] = ["Korea", "Japan", "Florida"]
+    var cities: [String] = ["Seoul", "Tokyo", "Disney World"]
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
@@ -25,6 +25,7 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
     {
         let cell: UITableViewCell = UITableViewCell(style: .default, reuseIdentifier: "cell")
         cell.textLabel?.text = places[indexPath.row]
+            cell.detailTextLabel?.text = cities[indexPath.row]
         return cell
     }
     
